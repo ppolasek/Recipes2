@@ -1,0 +1,33 @@
+<!--
+ Copyright (c) 2017, ppolasek. All rights reserved. Use of this source code
+ is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<!-- Trigger the modal with a button -->
+<!-- do not display this button but it is accessed from dart -->
+<button class="btn btn-info btn-sm" type="button" #openButton style="display: none;"
+        data-toggle="modal"
+        data-keyboard="true"
+        data-target="#myModalDialog">
+    {{ buttonLabel }}
+</button>
+
+<!-- Modal -->
+<div #myModalDialog id="myModalDialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{ heading }}</h4>
+            </div>
+            <div class="my-modal-content modal-body mylayout">
+                <ng-content></ng-content>
+            </div>
+            <div class="modal-footer">
+                <button #closeButton type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

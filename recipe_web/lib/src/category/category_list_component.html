@@ -1,0 +1,10 @@
+<!--
+ Copyright (c) 2017, ppolasek. All rights reserved. Use of this source code
+ is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<h3>Categories</h3>
+<div class="listcontainer">
+    <span class="listelement" *ngFor="let category of categories; let idx = index">
+        {{ idx + 1}}. {{category.title}}</span>
+</div>
